@@ -1,5 +1,3 @@
-Here's a README file for the notebook you provided:
-
 # Fine-tuning ModernBERT for Intent Classification
 
 This notebook demonstrates how to fine-tune the ModernBERT model for intent classification using Amazon SageMaker. The process involves preparing the dataset, training the model, and deploying it for inference.
