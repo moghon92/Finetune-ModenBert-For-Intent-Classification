@@ -37,7 +37,7 @@ Follow the notebook cells sequentially to:
 ## Key Components
 
 - `assets/train.py`: The main training script
-- `inference/inference.py`: Script for model inference
+- `assets/inference.py`: Script for model inference
 - `requirements.txt`: List of required Python packages
 
 ## Model
