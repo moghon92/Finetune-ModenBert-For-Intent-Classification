@@ -2,6 +2,30 @@
 
 This notebook demonstrates how to fine-tune the ModernBERT model for intent classification using Amazon SageMaker. The process involves preparing the dataset, training the model, and deploying it for inference.
 
+## A Brief Look at ModernBERT
+
+ModernBERT represents a significant advancement in encoder model technology, offering full backwards compatibility while introducing several major architectural improvements over the original BERT. The model comes in two variations:
+
+- ModernBERT Base (149M parameters)
+- ModernBERT Large (395M parameters)
+
+### Key Technical Innovations:
+
+    - Rotary Positional Embeddings (RoPE) replace traditional positional encodings, enabling better understanding of word relationships and supporting longer sequences
+    - Alternating Attention patterns that combine global and local attention every 3 layers, significantly improving processing efficiency
+    - GeGLU layers replace traditional MLP layers, enhancing the original BERT's GeLU activation function
+    - Streamlined architecture with removed bias terms for more efficient parameter usage
+    - Additional normalization layer after embeddings for improved training stability
+    - Advanced sequence packing and unpadding techniques that reduce computational waste
+    - Hardware-optimized design that better aligns with modern GPU architectures
+
+The model sets new performance standards in classification, retrieval, and code comprehension tasks, operating 2-4 times faster than previous encoders. This combination of speed and accuracy makes it ideal for high-volume production applications such as LLM routing, where both performance metrics are crucial.
+
+What sets ModernBERT apart is its extensive training on 2 trillion tokens from diverse sources, including web content, programming code, and academic literature. This broad training foundation - significantly more varied than traditional BERT models' Wikipedia-centric approach - enables better understanding of user inputs across multiple domains. The model also features an impressive 8,192 token context length, which is 16 times larger than most existing encoders.
+
+For detailed information about ModernBERT's architecture and development, you can find more documentation on [Hugging Face](https://huggingface.co/blog/modernbert).
+
+
 ## Contents
 
 1. Dataset Preparation
